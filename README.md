@@ -1,0 +1,5 @@
+# About #
+
+This is my public set of dot-files that I am using. I had a private messy dot-files repository and over time I will be re-organizing and slowly pulling over the most useful pieces.
+
+I'm an avid Vim user as of mid 2014. Since, I've been developing in PHP (IDX, LLC) and now Java (Nike). Yes I'm one of those that uses Vim for Java rather than IntelliJ or Eclipse. ;) I've also recently switched over to using Zsh over Bash. I'm a huge fan of automation for even the simplest tasks. I'm not afraid of using multiple programs to achieve that automation, using things like AutoHotKey (PC) and Keyboard Maestro (Mac) to create an integration between applications when one doesn't exist. I'm also big about maintainable and extendable software engineering, which I attempt to follow in my automation as well. So you'll find the SOLID principles throughout even my dot-files and macros. I hope this is useful to you. Feel free to submit any pull requests that you think I would find useful. In the future I hope to dive into Ruby and Python so in the future I'm hoping I'll have stuff along those lines as well.
