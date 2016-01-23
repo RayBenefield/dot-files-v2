@@ -1,3 +1,9 @@
+" Keeps some chars next to the windows edge while following unwrapped lines
+set sidescrolloff=10
+
+" Keeps some lines above/below the cursor as you vertically scroll
+set scrolloff=5
+
 " Handle bufferes - Next, Previous, Close
 nnoremap gt :bn<CR>
 nnoremap gT :bp<CR>
