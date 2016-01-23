@@ -6,3 +6,6 @@ inoremap jk <esc>
 
 " Refresh source with F5
 nnoremap <F5> :source $MYVIMRC<CR>:e<CR>
+
+" Easier Save
+nnoremap <C-W> :w<CR>
