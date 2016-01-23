@@ -14,6 +14,11 @@ call neobundle#begin(expand('/Users/GodlyPerfection/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+
+" Enables Git features directly in Vim
+NeoBundle "tpope/vim-fugitive"
+
+
 " Required:
 call neobundle#end()
 
