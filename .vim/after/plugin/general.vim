@@ -1,5 +1,8 @@
+" Hides buffers when switched away rather than closing them to keep undo history
+set hidden
+
 " Easier escape in insert mode
 inoremap jk <esc>
 
-" Hides buffers when switched away rather than closing them to keep undo history
-set hidden
+" Refresh source with F5
+nnoremap <F5> :source $MYVIMRC<CR>:e<CR>
