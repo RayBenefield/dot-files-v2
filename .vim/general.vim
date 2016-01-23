@@ -9,3 +9,8 @@ nnoremap <F5> :source $MYVIMRC<CR>:e<CR>
 
 " Easier Save
 nnoremap <C-W> :w<CR>
+
+augroup filetype_vim
+    autocmd!
+    autocmd BufWritePost *.vim :source $MYVIMRC
+augroup END
