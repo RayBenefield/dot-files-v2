@@ -29,6 +29,13 @@ NeoBundle "svermeulen/vim-easyclip"
 NeoBundle "tpope/vim-repeat"
 
 " --------------------------------------------------
+" Interface
+" --------------------------------------------------
+
+" Shows a git diff in the gutter (sign column), allows staging/reverting/navigating of hunks
+NeoBundle 'airblade/vim-gitgutter'
+
+" --------------------------------------------------
 
 
 " Required:
