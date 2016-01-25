@@ -15,8 +15,17 @@ call neobundle#begin(expand('/Users/GodlyPerfection/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 
+" --------------------------------------------------
+" General
+" --------------------------------------------------
+
 " Enables Git features directly in Vim
 NeoBundle "tpope/vim-fugitive"
+
+" Simplified clipboard management for Vim
+NeoBundle "svermeulen/vim-easyclip"
+
+" --------------------------------------------------
 
 
 " Required:
