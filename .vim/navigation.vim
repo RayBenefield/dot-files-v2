@@ -4,6 +4,10 @@ set sidescrolloff=10
 " Keeps some lines above/below the cursor as you vertically scroll
 set scrolloff=5
 
+" More logical navigation between hunks with OPT+`j`/`k` instead of `c`
+nmap ∆ <Plug>GitGutterNextHunk
+nmap ˚ <Plug>GitGutterPrevHunk
+
 " Handle bufferes - Next, Previous, Close
 nnoremap gt :bn<CR>
 nnoremap gT :bp<CR>
