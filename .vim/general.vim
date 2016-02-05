@@ -4,6 +4,9 @@ set hidden
 " Sets a unified shared clipboard between yank and system
 set clipboard=unnamed
 
+" Sets the leader character to `\`
+let mapleader = "\\"
+
 " Easier escape in insert mode
 inoremap jk <esc>
 
