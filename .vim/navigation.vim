@@ -1,3 +1,6 @@
+" Ignores the casing when searching
+set smartcase
+
 " Keeps some chars next to the windows edge while following unwrapped lines
 set sidescrolloff=10
 
