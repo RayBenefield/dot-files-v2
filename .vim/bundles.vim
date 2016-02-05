@@ -35,6 +35,9 @@ NeoBundle "tpope/vim-repeat"
 " Shows a git diff in the gutter (sign column), allows staging/reverting/navigating of hunks
 NeoBundle 'airblade/vim-gitgutter'
 
+" File explorer shelf for Vim
+NeoBundle 'scrooloose/nerdtree'
+
 " --------------------------------------------------
 
 
