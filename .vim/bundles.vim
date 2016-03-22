@@ -38,6 +38,9 @@ NeoBundle 'airblade/vim-gitgutter'
 " File explorer shelf for Vim
 NeoBundle 'scrooloose/nerdtree'
 
+" Special interface for more focused writing
+NeoBundle 'mikewest/vimroom'
+
 " --------------------------------------------------
 
 
