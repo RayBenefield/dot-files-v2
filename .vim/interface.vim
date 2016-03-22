@@ -31,3 +31,6 @@ set undodir=~/.vim/undo//
 
 " Toggle NERDTree
 nmap <LEADER>n :NERDTreeToggle<CR>
+
+" Toggle Vimroom
+nmap <LEADER>vr <Plug>VimroomToggle
