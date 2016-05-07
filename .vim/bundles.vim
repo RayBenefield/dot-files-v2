@@ -28,6 +28,9 @@ NeoBundle "svermeulen/vim-easyclip"
 " Add repeatability with some plugins like surround
 NeoBundle "tpope/vim-repeat"
 
+" Snippet functionality
+NeoBundle "sirver/ultisnips"
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
