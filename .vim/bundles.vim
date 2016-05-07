@@ -48,6 +48,9 @@ NeoBundle 'vim-airline/vim-airline-themes'
 " Special JSON handling
 NeoBundle 'elzr/vim-json'
 
+" Show indentation guids
+NeoBundle 'Yggdroot/indentLine'
+
 " --------------------------------------------------
 
 
