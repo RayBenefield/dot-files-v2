@@ -29,6 +29,9 @@ set directory=~/.vim/swap//
 " Enable undo files and set a designated directory
 set undodir=~/.vim/undo//
 
+" Always show the status line
+set laststatus=2
+
 " Toggle NERDTree
 nmap <LEADER>n :NERDTreeToggle<CR>
 

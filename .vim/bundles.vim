@@ -41,6 +41,10 @@ NeoBundle 'scrooloose/nerdtree'
 " Special interface for more focused writing
 NeoBundle 'mikewest/vimroom'
 
+" Statusline with Powerline font
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
 " --------------------------------------------------
 
 
