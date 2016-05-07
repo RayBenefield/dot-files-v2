@@ -45,6 +45,9 @@ NeoBundle 'mikewest/vimroom'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 
+" Special JSON handling
+NeoBundle 'elzr/vim-json'
+
 " --------------------------------------------------
 
 
