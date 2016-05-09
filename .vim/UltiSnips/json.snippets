@@ -47,3 +47,64 @@ snippet output
     "Value": { "Ref": "${3:LogicalId}" }
 }
 endsnippet
+
+snippet role
+"${1:Role}": {
+    "Type": "AWS::IAM::Role",
+    "Properties": {
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "lambda.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        },
+        "ManagedPolicyArns": [
+            "arn:aws:iam::789201490085:policy/lambda_basic_execution_role_policy_7889af1c-44c9-4841-8228-b63a2a89050b",
+            "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
+            "arn:aws:iam::aws:policy/AmazonSNSFullAccess"
+        ]
+    }
+}
+endsnippet
+
+snippet func
+"${1:Function}": {
+    "Type": "AWS::Lambda::Function",
+    "Properties": {
+        "FunctionName": "$1",
+        "Description": "${2:Description}",
+        "Runtime": "java8",
+        "Handler": "com.cartographerapi.functions.$1",
+        "Code": {
+            "S3Bucket": "${3:cartographer-api-lambda-code}",
+            "S3Key": "$1-0.0.1-SNAPSHOT.jar"
+        },
+        "Role": { "Fn::GetAtt" : ["${4:CartographerApiLambdaRole}", "Arn"] },
+        "Timeout": "${5:15}",
+        "MemorySize": "${6:512}"
+    }
+}
+endsnippet
+
+snippet stream
+"${1:Stream}": {
+    "Type" : "AWS::Lambda::EventSourceMapping",
+        "Properties" : {
+            "Enabled" : true,
+            "EventSourceArn" : {
+                "Fn::GetAtt" : [ "${2:Table}", "StreamArn" ]
+            },
+            "FunctionName" : {
+                "Fn::GetAtt" : [ "${3:Function}", "Arn" ]
+            },
+            "StartingPosition" : "LATEST"
+        }
+}
+endsnippet
