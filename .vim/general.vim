@@ -21,3 +21,6 @@ augroup filetype_vim
     autocmd!
     autocmd BufWritePost *.vim :source $MYVIMRC
 augroup END
+
+" Set folder that UltiSnips snippets are kept in
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
