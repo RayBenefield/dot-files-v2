@@ -1,0 +1,49 @@
+snippet table
+"${1:Table}": {
+    "Type": "AWS::DynamoDB::Table",
+    "Properties": {
+        "TableName": "$1",
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits": ${2:1},
+            "WriteCapacityUnits": ${3:1}
+        },
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "$4",
+                "AttributeType": "${5:S}"
+            }${8:,
+            {
+                "AttributeName": "$7",
+                "AttributeType": "${9:S}"
+            }}
+        ],
+        "KeySchema": [
+            {
+                "AttributeName": "${4:Attribute}",
+                "KeyType": "HASH"
+            }${6:,
+            {
+                "AttributeName": "${7:Attribute}",
+                "KeyType": "RANGE"
+            }}
+        ]${10:,
+        "StreamSpecification": {
+            "StreamViewType": "NEW_AND_OLD_IMAGES"
+        }}
+    }
+}
+endsnippet
+
+snippet attribute
+{
+    "AttributeName": "${1:Attribute}",
+    "AttributeType": "${2:S}"
+}
+endsnippet
+
+snippet output
+"${1:Key}": {
+    "Description": "${2:Description}",
+    "Value": { "Ref": "${3:LogicalId}" }
+}
+endsnippet
