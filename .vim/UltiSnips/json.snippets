@@ -77,6 +77,7 @@ endsnippet
 snippet func
 "${1:Function}": {
     "Type": "AWS::Lambda::Function",
+    ${7:"DependsOn": [ ${8:Resource} ],}
     "Properties": {
         "FunctionName": "$1",
         "Description": "${2:Description}",
@@ -96,15 +97,16 @@ endsnippet
 snippet stream
 "${1:Stream}": {
     "Type" : "AWS::Lambda::EventSourceMapping",
-        "Properties" : {
-            "Enabled" : true,
-            "EventSourceArn" : {
-                "Fn::GetAtt" : [ "${2:Table}", "StreamArn" ]
-            },
-            "FunctionName" : {
-                "Fn::GetAtt" : [ "${3:Function}", "Arn" ]
-            },
-            "StartingPosition" : "LATEST"
-        }
+    ${4:"DependsOn": [ ${5:Resource} ],}
+    "Properties" : {
+        "Enabled" : true,
+        "EventSourceArn" : {
+            "Fn::GetAtt" : [ "${2:Table}", "StreamArn" ]
+        },
+        "FunctionName" : {
+            "Fn::GetAtt" : [ "${3:Function}", "Arn" ]
+        },
+        "StartingPosition" : "LATEST"
+    }
 }
 endsnippet
