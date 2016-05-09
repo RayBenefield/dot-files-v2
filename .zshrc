@@ -1,6 +1,9 @@
 # Grab all aliases
 source ~/.bash_aliases
 
+# Grab all paths
+source ~/.bash_paths
+
 
 ##### oh-my-zsh setup #####
 

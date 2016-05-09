@@ -1,2 +1,14 @@
 # Cartographer API project
 eval capi='~/CAPI-Workspace/'
+
+# Public dot-files
+eval dot='~/public-dot-files/'
+
+# Vim folder
+eval vim='~/public-dot-files/.vim'
+
+# Bashrc
+eval brc='~/public-dot-files/.bashrc'
+
+# Zshrc
+eval zrc='~/public-dot-files/.zshrc'
