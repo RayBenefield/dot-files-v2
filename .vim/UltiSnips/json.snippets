@@ -157,3 +157,22 @@ endsnippet
 snippet ref
 { "Ref": "${1:Resource}" }
 endsnippet
+
+snippet queue
+"${1:Queue}": {
+	"Type": "AWS::SQS::Queue",
+	"Properties": {
+		"QueueName": "${2:Queue}"
+	}
+}
+endsnippet
+
+snippet queuePolicy
+"${1:Policy}": {
+	"Type" : "AWS::SQS::QueuePolicy",
+	"Properties" : {
+		"PolicyDocument" : ${2:Policy},
+		"Queues" : [ ${3:QueueArn} ]
+	}
+}
+endsnippet
