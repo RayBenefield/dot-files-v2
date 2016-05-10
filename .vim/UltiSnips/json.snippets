@@ -110,3 +110,19 @@ snippet stream
     }
 }
 endsnippet
+
+snippet topic
+"${1:Topic}": {
+	"Type" : "AWS::SNS::Topic",
+	"Properties" : {
+		"DisplayName" : "$1",
+		"TopicName" : "${2:Name}",
+		"Subscription" : [
+			${3:{
+				"Endpoint" : "${4:Arn}",
+				"Protocol" : "${5:sqs}"
+			}}
+		]
+	}
+}
+endsnippet
