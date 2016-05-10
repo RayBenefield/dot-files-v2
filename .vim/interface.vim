@@ -47,3 +47,6 @@ let g:airline_right_alt_sep = ''
 
 " vim-json settings
 let g:vim_json_syntax_conceal = 0
+
+" Indent file without moving cursor
+nnoremap g= gg=G``
