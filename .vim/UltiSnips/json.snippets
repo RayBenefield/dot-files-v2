@@ -87,7 +87,7 @@ snippet func
             "S3Bucket": "${3:cartographer-api-lambda-code}",
             "S3Key": "$1-0.0.1-SNAPSHOT.jar"
         },
-        "Role": { "Fn::GetAtt" : ["${4:CartographerApiLambdaRole}", "Arn"] },
+        "Role": { "Fn::GetAtt": ["${4:CartographerApiLambdaRole}", "Arn"] },
         "Timeout": "${5:15}",
         "MemorySize": "${6:512}"
     }
@@ -96,33 +96,64 @@ endsnippet
 
 snippet stream
 "${1:Stream}": {
-    "Type" : "AWS::Lambda::EventSourceMapping",
+    "Type": "AWS::Lambda::EventSourceMapping",
     ${4:"DependsOn": [ ${5:Resource} ],}
-    "Properties" : {
-        "Enabled" : true,
-        "EventSourceArn" : {
-            "Fn::GetAtt" : [ "${2:Table}", "StreamArn" ]
+    "Properties": {
+        "Enabled": true,
+        "EventSourceArn": {
+            "Fn::GetAtt": [ "${2:Table}", "StreamArn" ]
         },
-        "FunctionName" : {
-            "Fn::GetAtt" : [ "${3:Function}", "Arn" ]
+        "FunctionName": {
+            "Fn::GetAtt": [ "${3:Function}", "Arn" ]
         },
-        "StartingPosition" : "LATEST"
+        "StartingPosition": "LATEST"
     }
 }
 endsnippet
 
 snippet topic
 "${1:Topic}": {
-	"Type" : "AWS::SNS::Topic",
-	"Properties" : {
-		"DisplayName" : "$1",
-		"TopicName" : "${2:Name}",
-		"Subscription" : [
+	"Type": "AWS::SNS::Topic",
+	"Properties": {
+		"DisplayName": "$1",
+		"TopicName": "${2:Name}",
+		"Subscription": [
 			${3:{
-				"Endpoint" : "${4:Arn}",
-				"Protocol" : "${5:sqs}"
+				"Endpoint": "${4:Arn}",
+				"Protocol": "${5:sqs}"
 			}}
 		]
 	}
 }
+endsnippet
+
+snippet sub
+{
+	"Endpoint": ${1:Arn},
+	"Protocol": "${2:sqs}"
+}
+endsnippet
+
+snippet getatt
+{ "Fn::GetAtt": [ "${1:Resource}", "${2:Attribute}" ] }
+endsnippet
+
+snippet depends
+"DependsOn": [ "${1:Resource}" ],
+endsnippet
+
+snippet permission
+"${1:Permission}": {
+	"Type": "AWS::Lambda::Permission",
+	"Properties": {
+		"Action": "lambda:*",
+		"FunctionName": ${2:Arn},
+		"Principal": "${3:sns.amazonaws.com}",
+		"SourceArn": ${4:Arn}
+	}
+}
+endsnippet
+
+snippet ref
+{ "Ref": "${1:Resource}" }
 endsnippet
