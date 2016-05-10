@@ -77,7 +77,7 @@ endsnippet
 snippet func
 "${1:Function}": {
     "Type": "AWS::Lambda::Function",
-    ${7:"DependsOn": [ ${8:Resource} ],}
+    ${7:"DependsOn": [ "${8:Resource}" ],}
     "Properties": {
         "FunctionName": "$1",
         "Description": "${2:Description}",
