@@ -31,6 +31,9 @@ NeoBundle "tpope/vim-repeat"
 " Snippet functionality
 NeoBundle "sirver/ultisnips"
 
+" Add surround action to Vim functionality
+NeoBundle "tpope/vim-surround"
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
