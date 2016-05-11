@@ -176,3 +176,17 @@ snippet queuePolicy
 	}
 }
 endsnippet
+
+snippet restApi
+"${1:Api}": {
+	"Type" : "AWS::ApiGateway::RestApi",
+	"Properties" : {
+		"Name" : "$1",
+		"Description" : "${2:Description}",
+		"BodyS3Location" : {
+			"Bucket" : "${3:Bucket}",
+			"Key" : "${4:Key}"
+		}
+	}
+}
+endsnippet
