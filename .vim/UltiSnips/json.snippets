@@ -190,3 +190,25 @@ snippet restApi "An API Gateway Rest API."
 	}
 }
 endsnippet
+
+snippet endpointPermission "Allow an Endpoint to execute a Lambda Function."
+"${1:Permission}": {
+	"Type": "AWS::Lambda::Permission",
+	"Properties": {
+		"Action": "lambda:*",
+		"FunctionName": { "Fn::GetAtt": [ "${2:Function}", "Arn" ] },
+		"Principal": "apigateway.amazonaws.com",
+		"SourceArn": {
+			"Fn::Join": [ ":", [
+				"arn:aws:execute-api",
+				{ "Ref" : "AWS::Region" },
+				{ "Ref" : "AWS::AccountId" },
+				{ "Fn::Join": [ "", [
+					{ "Ref": "${3:API}" },
+					"/*/${4:GET}/${5:path/to/endpoint}"
+				] ] }
+			] ]
+		}
+	}
+}
+endsnippet
