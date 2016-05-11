@@ -1,4 +1,4 @@
-snippet table
+snippet table "A DynamoDB Table."
 "${1:Table}": {
     "Type": "AWS::DynamoDB::Table",
     "Properties": {
@@ -34,21 +34,21 @@ snippet table
 }
 endsnippet
 
-snippet attribute
+snippet attribute "A DynamoDB Attribute."
 {
     "AttributeName": "${1:Attribute}",
     "AttributeType": "${2:S}"
 }
 endsnippet
 
-snippet output
+snippet output "A CloudFormation Output variable."
 "${1:Key}": {
     "Description": "${2:Description}",
     "Value": { "Ref": "${3:LogicalId}" }
 }
 endsnippet
 
-snippet role
+snippet role "A IAM role."
 "${1:Role}": {
     "Type": "AWS::IAM::Role",
     "Properties": {
@@ -74,7 +74,7 @@ snippet role
 }
 endsnippet
 
-snippet func
+snippet func "A Lambda function."
 "${1:Function}": {
     "Type": "AWS::Lambda::Function",
     ${7:"DependsOn": [ "${8:Resource}" ],}
@@ -94,7 +94,7 @@ snippet func
 }
 endsnippet
 
-snippet stream
+snippet stream "A Stream EventSource for a Lambda Function."
 "${1:Stream}": {
     "Type": "AWS::Lambda::EventSourceMapping",
     ${4:"DependsOn": [ ${5:Resource} ],}
@@ -111,7 +111,7 @@ snippet stream
 }
 endsnippet
 
-snippet topic
+snippet topic "An SNS topic."
 "${1:Topic}": {
 	"Type": "AWS::SNS::Topic",
 	"Properties": {
@@ -127,22 +127,22 @@ snippet topic
 }
 endsnippet
 
-snippet sub
+snippet sub "A Subscription for an SNS topic."
 {
 	"Endpoint": ${1:Arn},
 	"Protocol": "${2:sqs}"
 }
 endsnippet
 
-snippet getatt
+snippet getatt "The GetAttribute function for CloudFormation."
 { "Fn::GetAtt": [ "${1:Resource}", "${2:Attribute}" ] }
 endsnippet
 
-snippet depends
+snippet depends "The DependsOn property for CloudFormation resources."
 "DependsOn": [ "${1:Resource}" ],
 endsnippet
 
-snippet permission
+snippet permission "A Lambda permission."
 "${1:Permission}": {
 	"Type": "AWS::Lambda::Permission",
 	"Properties": {
@@ -154,11 +154,11 @@ snippet permission
 }
 endsnippet
 
-snippet ref
+snippet ref "The Reference function for CloudFormation."
 { "Ref": "${1:Resource}" }
 endsnippet
 
-snippet queue
+snippet queue "An SQS Queue."
 "${1:Queue}": {
 	"Type": "AWS::SQS::Queue",
 	"Properties": {
@@ -167,7 +167,7 @@ snippet queue
 }
 endsnippet
 
-snippet queuePolicy
+snippet queuePolicy "A Policy defining access for an SQS Queue."
 "${1:Policy}": {
 	"Type" : "AWS::SQS::QueuePolicy",
 	"Properties" : {
@@ -177,7 +177,7 @@ snippet queuePolicy
 }
 endsnippet
 
-snippet restApi
+snippet restApi "An API Gateway Rest API."
 "${1:Api}": {
 	"Type" : "AWS::ApiGateway::RestApi",
 	"Properties" : {
