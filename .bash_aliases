@@ -3,8 +3,8 @@ alias bsh='exec /usr/local/bin/bash --login'
 alias zsh='exec /bin/zsh --login'
 
 # Source shells
-alias brc='source .bashrc'
-alias zrc='source .zshrc'
+alias brc='source ~/.bashrc'
+alias zrc='source ~/.zshrc'
 
 # Add new aliases and re-source them
 alias abbr='vim ~/public-dot-files/.bash_aliases && source ~/.bash_aliases'

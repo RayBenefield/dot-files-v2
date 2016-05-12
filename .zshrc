@@ -4,6 +4,9 @@ source ~/.bash_aliases
 # Grab all paths
 source ~/.bash_paths
 
+# Don't trust the cache for autocompletion
+zstyle ":completion:*:commands" rehash 1
+
 
 ##### oh-my-zsh setup #####
 
