@@ -44,7 +44,7 @@ endsnippet
 snippet output "A CloudFormation Output variable."
 "${1:Key}": {
     "Description": "${2:Description}",
-    "Value": { "Ref": "${3:LogicalId}" }
+    "Value": ${3:LogicalId}
 }
 endsnippet
 
@@ -211,4 +211,48 @@ snippet endpointPermission "Allow an Endpoint to execute a Lambda Function."
 		}
 	}
 }
+endsnippet
+
+snippet deployment "A deployment of the API."
+"${1:Deployment}": {
+	"Type" : "AWS::ApiGateway::Deployment",
+	"Properties" : {
+		"Description" : "${2:Description}",
+		"RestApiId" : ${3:ApiId},
+		"StageName" : "${4:Stage}"
+	}
+}
+endsnippet
+
+snippet apiKey "Generate an API Key for an API."
+"${1:ApiKey}": {
+	"Type" : "AWS::ApiGateway::ApiKey",
+	"Properties" : {
+		"Description" : "${2:Description}",
+		"Enabled" : ${3:true},
+		"Name" : "${4:Name}",
+		"StageKeys" : [
+			{
+				"RestApiId" : ${5:ApiId},
+				"StageName" : "test"
+			}
+		]
+	}
+}
+endsnippet
+
+snippet stage "A stage for an API."
+"${1:Stage}": {
+	"Type" : "AWS::ApiGateway::Stage",
+	"Properties" : {
+		"StageName" : ${2:$1},
+		"Description" : "${3:Description}",
+		"RestApiId" : ${4:ApiId},
+		"DeploymentId" : ${5:DeploymentId}
+	}
+}
+endsnippet
+
+snippet join "The join function for CloudFormation."
+{ "Fn::Join": [ "${1}", [ ${1:"String"} ] ] }
 endsnippet
