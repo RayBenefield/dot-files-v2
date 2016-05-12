@@ -169,23 +169,23 @@ endsnippet
 
 snippet queuePolicy "A Policy defining access for an SQS Queue."
 "${1:Policy}": {
-	"Type" : "AWS::SQS::QueuePolicy",
-	"Properties" : {
-		"PolicyDocument" : ${2:Policy},
-		"Queues" : [ ${3:QueueArn} ]
+	"Type": "AWS::SQS::QueuePolicy",
+	"Properties": {
+		"PolicyDocument": ${2:Policy},
+		"Queues": [ ${3:QueueArn} ]
 	}
 }
 endsnippet
 
 snippet restApi "An API Gateway Rest API."
 "${1:Api}": {
-	"Type" : "AWS::ApiGateway::RestApi",
-	"Properties" : {
-		"Name" : "$1",
-		"Description" : "${2:Description}",
-		"BodyS3Location" : {
-			"Bucket" : "${3:Bucket}",
-			"Key" : "${4:Key}"
+	"Type": "AWS::ApiGateway::RestApi",
+	"Properties": {
+		"Name": "$1",
+		"Description": "${2:Description}",
+		"BodyS3Location": {
+			"Bucket": "${3:Bucket}",
+			"Key": "${4:Key}"
 		}
 	}
 }
@@ -201,8 +201,8 @@ snippet endpointPermission "Allow an Endpoint to execute a Lambda Function."
 		"SourceArn": {
 			"Fn::Join": [ ":", [
 				"arn:aws:execute-api",
-				{ "Ref" : "AWS::Region" },
-				{ "Ref" : "AWS::AccountId" },
+				{ "Ref": "AWS::Region" },
+				{ "Ref": "AWS::AccountId" },
 				{ "Fn::Join": [ "", [
 					{ "Ref": "${3:API}" },
 					"/*/${4:GET}/${5:path/to/endpoint}"
@@ -215,26 +215,26 @@ endsnippet
 
 snippet deployment "A deployment of the API."
 "${1:Deployment}": {
-	"Type" : "AWS::ApiGateway::Deployment",
-	"Properties" : {
-		"Description" : "${2:Description}",
-		"RestApiId" : ${3:ApiId},
-		"StageName" : "${4:Stage}"
+	"Type": "AWS::ApiGateway::Deployment",
+	"Properties": {
+		"Description": "${2:Description}",
+		"RestApiId": ${3:ApiId},
+		"StageName": "${4:Stage}"
 	}
 }
 endsnippet
 
 snippet apiKey "Generate an API Key for an API."
 "${1:ApiKey}": {
-	"Type" : "AWS::ApiGateway::ApiKey",
-	"Properties" : {
-		"Description" : "${2:Description}",
-		"Enabled" : ${3:true},
-		"Name" : "${4:Name}",
-		"StageKeys" : [
+	"Type": "AWS::ApiGateway::ApiKey",
+	"Properties": {
+		"Description": "${2:Description}",
+		"Enabled": ${3:true},
+		"Name": "${4:Name}",
+		"StageKeys": [
 			{
-				"RestApiId" : ${5:ApiId},
-				"StageName" : "test"
+				"RestApiId": ${5:ApiId},
+				"StageName": "test"
 			}
 		]
 	}
@@ -243,16 +243,39 @@ endsnippet
 
 snippet stage "A stage for an API."
 "${1:Stage}": {
-	"Type" : "AWS::ApiGateway::Stage",
-	"Properties" : {
-		"StageName" : ${2:$1},
-		"Description" : "${3:Description}",
-		"RestApiId" : ${4:ApiId},
-		"DeploymentId" : ${5:DeploymentId}
+	"Type": "AWS::ApiGateway::Stage",
+	"Properties": {
+		"StageName": ${2:$1},
+		"Description": "${3:Description}",
+		"RestApiId": ${4:ApiId},
+		"DeploymentId": ${5:DeploymentId}
 	}
 }
 endsnippet
 
 snippet join "The join function for CloudFormation."
 { "Fn::Join": [ "${1}", [ ${1:"String"} ] ] }
+endsnippet
+
+snippet template "Basic structure for a CloudFormation template."
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Parameters": {
+		${1}
+	},
+	"Resources": {
+		${2}
+	},
+	"Outputs": {
+		${3}
+	}
+}
+endsnippet
+
+snippet parameter "A CloudFormation parameter"
+"${1:Parameter}": {
+	"Type": "${2:String}",
+	"Default": "${3:Default}",
+	"Description": "${4:Description}"
+}
 endsnippet
