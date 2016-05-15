@@ -40,6 +40,9 @@ NeoBundle "kien/ctrlp.vim"
 " Java features like autocomplete
 NeoBundle 'artur-shaik/vim-javacomplete2'
 
+" Add commenting features
+NeoBundle 'scrooloose/nerdcommenter'
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
