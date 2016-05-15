@@ -34,6 +34,12 @@ NeoBundle "sirver/ultisnips"
 " Add surround action to Vim functionality
 NeoBundle "tpope/vim-surround"
 
+" Added fuzzy file search capabilities
+NeoBundle "kien/ctrlp.vim"
+
+" Java features like autocomplete
+NeoBundle 'artur-shaik/vim-javacomplete2'
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
