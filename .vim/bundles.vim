@@ -43,6 +43,9 @@ NeoBundle 'artur-shaik/vim-javacomplete2'
 " Add commenting features
 NeoBundle 'scrooloose/nerdcommenter'
 
+" Add Sublime Multi-cursor support for Vim
+NeoBundle 'terryma/vim-multiple-cursors'
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
