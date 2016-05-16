@@ -45,11 +45,21 @@ let g:airline_right_alt_sep = ''
 " vim-json settings
 let g:vim_json_syntax_conceal = 0
 
+" Show leading whitespace that includes spaces, and trailing whitespace.
+highlight ExtraWhitespace ctermbg=white guibg=white
+augroup HighlightWhiteSpace
+	autocmd!
+	autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+augroup END
+
+" Remove trailing whitespace
+nnoremap <Leader>ws :%s/\s\+$//e<CR>``
+
 " Turn off search highlighting
 command! H let @/=""
 
 " Returns true if NERDTree open/active
-function! s:isNTOpen()        
+function! s:isNTOpen()
 	return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
