@@ -1,6 +1,9 @@
 " Ignores the casing when searching
 set smartcase
 
+" Set relative numbering for better navigation
+set relativenumber
+
 " Keeps some chars next to the windows edge while following unwrapped lines
 set sidescrolloff=10
 
