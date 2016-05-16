@@ -18,8 +18,8 @@ nnoremap <C-W> :w<CR>
 
 " Automatically re-source vimrc when a *.vim file is saved
 augroup filetype_vim
-    autocmd!
-    autocmd BufWritePost *.vim :source $MYVIMRC
+	autocmd!
+	autocmd BufWritePost *.vim :source $MYVIMRC
 augroup END
 
 " Set folder that UltiSnips snippets are kept in
@@ -43,3 +43,16 @@ imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
 " To remove all missing imports with F7:
 nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
+" The Silver Searcher
+if executable('ag')
+	" Use ag over grep
+	set grepprg=ag\ --nogroup\ --nocolor
+
+	" Use ag in CtrlP for listing files. Lightning fast and respects
+	".gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+	"ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
+endif
