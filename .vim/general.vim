@@ -4,6 +4,9 @@ set hidden
 " Sets a unified shared clipboard between yank and system
 set clipboard=unnamed
 
+" Turn off swap files
+set noswapfile
+
 " Refresh source with F5
 nnoremap <F5> :source $MYVIMRC<CR>:e<CR>
 
