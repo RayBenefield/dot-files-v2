@@ -101,6 +101,9 @@ NeoBundle 'terryma/vim-multiple-cursors'
 " Adds the ability to word jump by CamelCasing
 NeoBundle 'bkad/CamelCaseMotion'
 
+" Adds case changing, better autocorrect, and search fanciness
+NeoBundle 'tpope/vim-abolish'
+
 " --------------------------------------------------
 
 
