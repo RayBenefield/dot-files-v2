@@ -27,6 +27,8 @@ nnoremap <C-H> <C-W><C-H>  " Left
 nnoremap <C-\> :vsplit<CR>:b#<CR> " Vertical
 nnoremap <C-_> :split<CR>:b#<CR>  " Horizontal
 
+let g:ctrlp_map = '<LEADER>p'
+
 " The Silver Searcher
 if executable('ag')
 	" Use ag over grep
