@@ -52,3 +52,25 @@ function wherein ()
         fi;
     done
 }
+
+# Upload updated Lambda function
+function updateLambda()
+{
+	Directory=$(find . -name "${1}.java" | sed "s/src\/.*//")
+
+	if [ -d "${Directory}" ]; then
+		cd ${Directory}
+		mvn package shade:shade
+
+		ExitCode=$?
+		if [[ ${ExitCode} -ne 0 ]] ; then
+			cd -
+			return
+		fi
+
+		aws s3 cp target/${1}-0.0.1-SNAPSHOT.jar s3://cartographer-api-lambda-code/${1}-0.0.1-SNAPSHOT.jar
+		aws lambda update-function-code --function-name ${1} --s3-bucket cartographer-api-lambda-code --s3-key ${1}-0.0.1-SNAPSHOT.jar
+
+		cd -
+	fi
+}
