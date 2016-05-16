@@ -47,3 +47,19 @@ let g:vim_json_syntax_conceal = 0
 
 " Turn off search highlighting
 command! H let @/=""
+
+" Returns true if NERDTree open/active
+function! s:isNTOpen()        
+	return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" Calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+function! s:syncTree()
+	if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
+		NERDTreeFind
+		wincmd p
+	endif
+endfunction
+
+" Whenever a buffer is opened then sync up NERDTree
+autocmd BufEnter * call s:syncTree()
