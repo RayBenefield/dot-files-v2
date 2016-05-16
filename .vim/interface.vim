@@ -49,7 +49,7 @@ let g:vim_json_syntax_conceal = 0
 highlight ExtraWhitespace ctermbg=white guibg=white
 augroup HighlightWhiteSpace
 	autocmd!
-	autocmd BufWinEnter * match ExtraWhitespace /^\s* \s*\|\s\+$/
+	autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 augroup END
 
 " Remove trailing whitespace
@@ -71,5 +71,15 @@ function! s:syncTree()
 	endif
 endfunction
 
-" Whenever a buffer is opened then sync up NERDTree
-autocmd BufEnter * call s:syncTree()
+" When Vim is opened then open NERDTree
+augroup HighlightWhiteSpace
+	autocmd!
+
+	" When vim is opened, open NERDTree
+	autocmd VimEnter * NERDTree | wincmd p
+	autocmd BufEnter * NERDTreeMirror
+
+	" Whenever a buffer is opened then sync up NERDTree
+	autocmd BufEnter * call s:syncTree()
+augroup END
+

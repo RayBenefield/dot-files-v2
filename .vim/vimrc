@@ -1,6 +1,9 @@
 " All loaded vim bundles through NeoBundle
 source $HOME/.vim/bundles.vim
 
+" Navigation vim configurations
+source $HOME/.vim/typing.vim
+
 " General vim configurations
 source $HOME/.vim/general.vim
 
@@ -9,6 +12,3 @@ source $HOME/.vim/interface.vim
 
 " Navigation vim configurations
 source $HOME/.vim/navigation.vim
-
-" Navigation vim configurations
-source $HOME/.vim/typing.vim
