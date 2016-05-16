@@ -98,6 +98,9 @@ NeoBundle 'scrooloose/nerdcommenter'
 " Add Sublime Multi-cursor support for Vim
 NeoBundle 'terryma/vim-multiple-cursors'
 
+" Adds the ability to word jump by CamelCasing
+NeoBundle 'bkad/CamelCaseMotion'
+
 " --------------------------------------------------
 
 

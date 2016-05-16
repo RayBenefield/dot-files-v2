@@ -19,3 +19,22 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 " Setup autocompletion for all java files
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" CamelCasing movements
+" normal mode
+nmap <silent> w <Plug>CamelCaseMotion_w
+nmap <silent> b <Plug>CamelCaseMotion_b
+nmap <silent> e <Plug>CamelCaseMotion_e
+" visual mode
+xmap <silent> w <Plug>CamelCaseMotion_w
+xmap <silent> b <Plug>CamelCaseMotion_b
+xmap <silent> e <Plug>CamelCaseMotion_e
+" text-objects
+omap <silent> aw <Plug>CamelCaseMotion_iw
+xmap <silent> aw <Plug>CamelCaseMotion_iw
+omap <silent> iw <Plug>CamelCaseMotion_ie
+xmap <silent> iw <Plug>CamelCaseMotion_ie
+" operator pending mode
+omap <silent> w <Plug>CamelCaseMotion_w
+omap <silent> b <Plug>CamelCaseMotion_b
+omap <silent> e <Plug>CamelCaseMotion_e[20~
