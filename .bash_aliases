@@ -6,6 +6,9 @@ alias zsh='exec /bin/zsh --login'
 alias brc='source ~/.bashrc'
 alias zrc='source ~/.zshrc'
 
+# Use a different screen version
+alias screen='/usr/local/bin/screen'
+
 # Add new aliases and re-source them
 alias abbr='vim ~/public-dot-files/.bash_aliases && source ~/.bash_aliases'
 
