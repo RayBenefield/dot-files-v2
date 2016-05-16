@@ -23,3 +23,16 @@ nnoremap <C-L> <C-W><C-L>  " Right
 nnoremap <C-H> <C-W><C-H>  " Left
 nnoremap <C-\> :vsplit<CR>:b#<CR> " Vertical
 nnoremap <C-_> :split<CR>:b#<CR>  " Horizontal
+
+" The Silver Searcher
+if executable('ag')
+	" Use ag over grep
+	set grepprg=ag\ --nogroup\ --nocolor
+
+	" Use ag in CtrlP for listing files. Lightning fast and respects
+	".gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+	"ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
+endif
