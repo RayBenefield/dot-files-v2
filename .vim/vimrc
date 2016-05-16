@@ -9,3 +9,6 @@ source $HOME/.vim/interface.vim
 
 " Navigation vim configurations
 source $HOME/.vim/navigation.vim
+
+" Navigation vim configurations
+source $HOME/.vim/typing.vim
