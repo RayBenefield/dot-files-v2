@@ -34,9 +34,6 @@ NeoBundle "sirver/ultisnips"
 " Add surround action to Vim functionality
 NeoBundle "tpope/vim-surround"
 
-" Added fuzzy file search capabilities
-NeoBundle "kien/ctrlp.vim"
-
 " Java features like autocomplete
 NeoBundle 'artur-shaik/vim-javacomplete2'
 
@@ -45,6 +42,9 @@ NeoBundle 'scrooloose/nerdcommenter'
 
 " Add Sublime Multi-cursor support for Vim
 NeoBundle 'terryma/vim-multiple-cursors'
+
+" Useful pair-like features that utilize square brackets []
+NeoBundle 'tpope/vim-unimpaired'
 
 " --------------------------------------------------
 " Interface
@@ -68,6 +68,35 @@ NeoBundle 'elzr/vim-json'
 
 " Show indentation guids
 NeoBundle 'Yggdroot/indentLine'
+
+" --------------------------------------------------
+" Navigation
+" --------------------------------------------------
+
+" Added fuzzy file search capabilities
+NeoBundle "kien/ctrlp.vim"
+
+" --------------------------------------------------
+" Typing
+" --------------------------------------------------
+
+" Add repeatability with some plugins like surround
+NeoBundle "tpope/vim-repeat"
+
+" Snippet functionality
+NeoBundle "sirver/ultisnips"
+
+" Add surround action to Vim functionality
+NeoBundle "tpope/vim-surround"
+
+" Java features like autocomplete
+NeoBundle 'artur-shaik/vim-javacomplete2'
+
+" Add commenting features
+NeoBundle 'scrooloose/nerdcommenter'
+
+" Add Sublime Multi-cursor support for Vim
+NeoBundle 'terryma/vim-multiple-cursors'
 
 " --------------------------------------------------
 
