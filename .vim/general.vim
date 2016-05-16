@@ -5,7 +5,7 @@ set hidden
 set clipboard=unnamed
 
 " Sets the leader character to `\`
-let mapleader = "\\"
+let mapleader = ";"
 
 " Easier escape in insert mode
 inoremap jk <esc>
