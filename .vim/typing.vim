@@ -10,6 +10,10 @@ nnoremap <C-W> :w<CR>
 " Indent file without moving cursor
 nnoremap g= gg=G``
 
+" Better visual indentations
+vnoremap > >gv
+vnoremap < <gv
+
 " Set folder that UltiSnips snippets are kept in
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
