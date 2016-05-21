@@ -9,6 +9,9 @@ alias zrc='source ~/.zshrc'
 # Use a different screen version
 alias screen='/usr/local/bin/screen'
 
+# Redirect to NeoVim
+alias vim='nvim'
+
 # Add new aliases and re-source them
 alias abbr='vim ~/public-dot-files/.bash_aliases && source ~/.bash_aliases'
 
