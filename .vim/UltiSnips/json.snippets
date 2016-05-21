@@ -41,13 +41,6 @@ snippet attribute "A DynamoDB Attribute."
 }
 endsnippet
 
-snippet output "A CloudFormation Output variable."
-"${1:Key}": {
-    "Description": "${2:Description}",
-    "Value": ${3:LogicalId}
-}
-endsnippet
-
 snippet role "A IAM role."
 "${1:Role}": {
     "Type": "AWS::IAM::Role",
@@ -277,5 +270,49 @@ snippet parameter "A CloudFormation parameter"
 	"Type": "${2:String}",
 	"Default": "${3:Default}",
 	"Description": "${4:Description}"
+}
+endsnippet
+
+snippet output "A CloudFormation Output variable."
+"${1:Key}": {
+    "Description": "${2:Description}",
+    "Value": ${3:LogicalId}
+}
+endsnippet
+
+snippet outputTopic "The output variables for an SNS topic."
+"TopicArn${1:Key}": {
+    "Description": "The ARN for the $1 topic.",
+    "Value": { "Ref": "$1" }
+},
+"TopicName$1": {
+    "Description": "The Topic Name for the $1 topic.",
+    "Value": { "Fn::GetAtt" : [ "$1", "TopicName" ] }
+}
+endsnippet
+
+snippet outputFunc "The output variables for a Lambda function."
+"FuncArn${1:Key}": {
+    "Description": "The ARN for the $1 function.",
+    "Value": { "Fn::GetAtt" : [ "$1", "Arn" ] }
+},
+"FuncId$1": {
+    "Description": "The logical ID for the $1 function.",
+    "Value": { "Ref": "$1" }
+}
+endsnippet
+
+snippet outputQueue "The output variables for an SQS Queue."
+"QueueArn${1:Key}": {
+    "Description": "The ARN for the $1 queue.",
+    "Value": { "Fn::GetAtt" : [ "$1", "Arn" ] }
+},
+"QueueUrl$1": {
+    "Description": "The url for the $1 queue.",
+    "Value": { "Ref": "$1" }
+},
+"QueueName$1": {
+    "Description": "The name for the $1 queue.",
+    "Value": { "Fn::GetAtt" : [ "$1", "QueueName" ] }
 }
 endsnippet
