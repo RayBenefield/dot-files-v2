@@ -8,6 +8,9 @@ highlight Visual cterm=NONE ctermbg=235 ctermfg=NONE guibg=Grey15
 let &t_SI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
+" Show the current line numbers
+set number
+
 " Show uncomplete commands in the bottom right
 set showcmd
 
