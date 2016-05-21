@@ -14,6 +14,9 @@ nnoremap g= gg=G``
 vnoremap > >gv
 vnoremap < <gv
 
+nnoremap å <C-a>
+nnoremap ≈ <C-x>
+
 " Set folder that UltiSnips snippets are kept in
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
