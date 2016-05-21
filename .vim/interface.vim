@@ -75,14 +75,12 @@ function! s:syncTree()
 endfunction
 
 " When Vim is opened then open NERDTree
-augroup HighlightWhiteSpace
+augroup SyncWithNerdTree
 	autocmd!
 
 	" When vim is opened, open NERDTree
-	autocmd VimEnter * NERDTree | wincmd p
 	autocmd BufEnter * NERDTreeMirror
 
 	" Whenever a buffer is opened then sync up NERDTree
 	autocmd BufEnter * call s:syncTree()
 augroup END
-
