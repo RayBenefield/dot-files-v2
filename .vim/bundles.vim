@@ -1,10 +1,10 @@
 if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+    if &compatible
+        set nocompatible               " Be iMproved
+    endif
 
-  " Required:
-  set runtimepath+=/Users/GodlyPerfection/.vim/bundle/neobundle.vim/
+    " Required:
+    set runtimepath+=/Users/GodlyPerfection/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
