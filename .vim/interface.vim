@@ -51,8 +51,8 @@ let g:vim_json_syntax_conceal = 0
 " Show leading whitespace that includes spaces, and trailing whitespace.
 highlight ExtraWhitespace ctermbg=white guibg=white
 augroup HighlightWhiteSpace
-	autocmd!
-	autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+    autocmd!
+    autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 augroup END
 
 " Remove trailing whitespace
@@ -61,26 +61,26 @@ nnoremap <Leader>ws :%s/\s\+$//e<CR>``
 " Turn off search highlighting
 command! H let @/=""
 
-" Returns true if NERDTree open/active
-function! s:isNTOpen()
-	return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
+ "Returns true if NERDTree open/active
+"function! s:isNTOpen()
+    "return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+"endfunction
 
-" Calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! s:syncTree()
-	if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
-		NERDTreeFind
-		wincmd p
-	endif
-endfunction
+ "Calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+"function! s:syncTree()
+    "if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
+        "NERDTreeFind
+        "wincmd p
+    "endif
+"endfunction
 
-" When Vim is opened then open NERDTree
-augroup SyncWithNerdTree
-	autocmd!
+ "When Vim is opened then open NERDTree
+"augroup SyncWithNerdTree
+    "autocmd!
 
-	" When vim is opened, open NERDTree
-	autocmd BufEnter * NERDTreeMirror
+     "When vim is opened, open NERDTree
+    "autocmd BufEnter * NERDTreeMirror
 
-	" Whenever a buffer is opened then sync up NERDTree
-	autocmd BufEnter * call s:syncTree()
-augroup END
+     "Whenever a buffer is opened then sync up NERDTree
+    "autocmd BufEnter * call s:syncTree()
+"augroup END
