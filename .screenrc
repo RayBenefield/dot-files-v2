@@ -1,0 +1,57 @@
+defflow auto
+defscrollback 5000
+altscreen on
+autodetach on
+msgwait 2 # 1 second messages
+#change the hardstatus settings to
+#give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+# term screen-256color
+defutf8 on
+#hardstatus alwayslastline
+#hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{ g}]%{=b C}[ %m/%d %c ]%{W}'
+
+#vbell_msg "[[[ ding ]]]"
+#vbel off
+startup_message off
+
+# remove some stupid / dangerous key bindings
+bind W
+bind .
+bind ^h
+bind h
+# make them better
+bind 'K' kill
+bind 'W' windowlist
+# f1 and f2, forward and back
+#bindkey -k k1 prev
+#bindkey -k k2 next
+
+# focus binds
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+# Title bind
+bind E title ""
+
+term "screen-256color"
+#attrcolor b ".I" # use bright colors for bold
+
+# TODO: TESTING SOMETHING for changing Terminal window name
+termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+#hardstatus lastline '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{ g}]%{=b C}[ %m/%d %c ]%{W}'
+#caption always '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{ g}]%{=b C}[ %m/%d %c ]%{W}'
+hardstatus ignore "%h [screen(%S)%? - %t%?]"
+#caption always "*||||||||||||%=%-Lw%{= BW}%50=%n%f* %t%{-}%+Lw%94=|||||||||||||*"
+caption always "%?%F%{= k.}%:%{= k.}%?%{= .g}[ %{= .G}%S - %n%{= .g} ]%{= .g}[ %L=%=%?%{= .K}%-w %?%45L>%{=b .R}<- %{=u .W}%n - %t%{=b .R} ->%{= .K}%?%+w%?%?%=%-030= %{= .g}][ %{=b .C}%D %{= .g}| %{= .C}%m/%d/%y %{= .g}| %{= .C}%0C%a %{= .g}]%{= .W}"
+#caption always "[%H]%L=%=%-w%45L>(%n-%t)%+w%=%-13=[%d/%m %c]"
+
+# Toggle Fullscreen
+#bind F eval "caption always '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{ g}]%{=b C}[ %m/%d %c ]%{W}'"
+#bind f eval "caption always '%{gk}[ %{G}%H %{g}]%{= kg}[%=%?%F%{=b kR}<- %{W}%?%t%?(%u)%?%?%F%{=b kR} ->%?%=%{= kg}][ %{=b C}%m/%d %c %{= kg}]%{W}'"
+bind F eval "caption always '%?%F%{= k.}%:%{= k.}%?%{= .g}[ %{= .G}%S - %n%{= .g} ]%{= .g}[ %L=%=%?%{= .K}%-w %?%50L>%{=b .R}<- %{=u .W}%n - %t%{=b .R} ->%{= .K}%?%+w%?%?%=%-030= %{= .g}][ %{=b .C}%D %{= .g}| %{= .C}%m/%d/%y %{= .g}| %{= .C}%0C%a %{= .g}]%{= .W}'"
+bind f eval "caption always '%?%F%{= k.}%:%{= k.}%?%{= .g}[ %{= .G}%S - %n%{= .g} ]%{= .g}[ %=%?%F%{=b .R}<- %{=u .W}%:%{= .K}%?%t%?%F%{=b .R} ->%?%=%{= .g} ][ %{=b .C}%D %{= .g}| %{= .C}%m/%d/%y %{= .g}| %{= .C}%0C%a %{= .g}]%{= .W}'"
+
+bind R fit
