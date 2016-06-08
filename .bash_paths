@@ -12,3 +12,9 @@ eval brc='~/public-dot-files/.bashrc'
 
 # Zshrc
 eval zrc='~/public-dot-files/.zshrc'
+
+# Development
+eval dev='~/Development'
+
+# Document shortcut
+eval docs='~/Documents'
