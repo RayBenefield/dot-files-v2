@@ -12,6 +12,6 @@ nnoremap <F5> :source $MYVIMRC<CR>:e<CR>
 
 " Automatically re-source vimrc when a *.vim file is saved
 augroup filetype_vim
-	autocmd!
-	autocmd BufWritePost *.vim :source $MYVIMRC
+    autocmd!
+    autocmd BufWritePost *.vim :source $MYVIMRC
 augroup END
