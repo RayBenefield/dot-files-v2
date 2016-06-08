@@ -1,0 +1,41 @@
+[user]
+	name = Raymond Benefield
+	email = Raymond.Benefield@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	a = add .
+	p = pull --rebase
+	f = fetch --all
+	d = difftool
+	st = status -u
+	ci = commit
+	br = branch
+	co = checkout
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	l = log --oneline
+	prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
+	branch-log = git difftool develop..HEAD log issue/PTAPP-428-refine-logging-system --not  refs/heads/develop\n refs/heads/issue/PTAPP-426-convert-existing-phpunit-unit-tests\n refs/heads/issue/PTAPP-429-the-final-destination-system\n refs/heads/master\n refs/heads/pullrequests/pr-11\n refs/heads/pullrequests/pr-12
+	pretty = log --graph --oneline --decorate
+	refresh = reset --hard @{u}
+	rf = reset --hard @{u}
+	show-files = show --pretty="format:" --name-only
+	sf = show --pretty="format:" --name-only
+	re = rebase -i --autosquash
+	rs = reset
+	clearWithIgnore = rm --cached `git ls-files -i --exclude-from=.gitignore`
+[color]
+	ui = true
+[core]
+	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.gitignore
+	editor = vim
+[branch]
+	autosetupmerge = true
+[push]
+	default = tracking
+[merge]
+	stat = true
