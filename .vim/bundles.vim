@@ -1,118 +1,114 @@
-if has('vim_starting')
-    if &compatible
-        set nocompatible               " Be iMproved
-    endif
-
-    " Required:
-    set runtimepath+=/Users/GodlyPerfection/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
+set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
+call dein#begin(expand('~/.vim/bundle'))
+
+" Let Dein manage itself
 " Required:
-call neobundle#begin(expand('/Users/GodlyPerfection/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
+call dein#add('Shougo/dein.vim')
 
 " --------------------------------------------------
 " General
 " --------------------------------------------------
 
 " Enables Git features directly in Vim
-NeoBundle "tpope/vim-fugitive"
+call dein#add("tpope/vim-fugitive")
 
 " Simplified clipboard management for Vim
-NeoBundle "svermeulen/vim-easyclip"
+call dein#add("svermeulen/vim-easyclip")
 
 " Add repeatability with some plugins like surround
-NeoBundle "tpope/vim-repeat"
+call dein#add("tpope/vim-repeat")
 
 " Snippet functionality
-NeoBundle "sirver/ultisnips"
+call dein#add("sirver/ultisnips")
 
 " Add surround action to Vim functionality
-NeoBundle "tpope/vim-surround"
+call dein#add("tpope/vim-surround")
 
 " Java features like autocomplete
-NeoBundle 'artur-shaik/vim-javacomplete2'
+call dein#add('artur-shaik/vim-javacomplete2')
 
 " Add commenting features
-NeoBundle 'scrooloose/nerdcommenter'
+call dein#add('scrooloose/nerdcommenter')
 
 " Add Sublime Multi-cursor support for Vim
-NeoBundle 'terryma/vim-multiple-cursors'
+call dein#add('terryma/vim-multiple-cursors')
 
 " Useful pair-like features that utilize square brackets []
-NeoBundle 'tpope/vim-unimpaired'
+call dein#add('tpope/vim-unimpaired')
 
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
 
 " Shows a git diff in the gutter (sign column), allows staging/reverting/navigating of hunks
-NeoBundle 'airblade/vim-gitgutter'
+call dein#add('airblade/vim-gitgutter')
 
 " File explorer shelf for Vim
-NeoBundle 'scrooloose/nerdtree'
+call dein#add('scrooloose/nerdtree')
 
 " Special interface for more focused writing
-NeoBundle 'mikewest/vimroom'
+call dein#add('mikewest/vimroom')
 
 " Statusline with Powerline font
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 
 " Special JSON handling
-NeoBundle 'elzr/vim-json'
+call dein#add('elzr/vim-json')
 
 " Show indentation guids
-NeoBundle 'Yggdroot/indentLine'
+call dein#add('Yggdroot/indentLine')
 
 " --------------------------------------------------
 " Navigation
 " --------------------------------------------------
 
 " Added fuzzy file search capabilities
-NeoBundle "kien/ctrlp.vim"
+call dein#add("kien/ctrlp.vim")
 
 " --------------------------------------------------
 " Typing
 " --------------------------------------------------
 
 " Add repeatability with some plugins like surround
-NeoBundle "tpope/vim-repeat"
+call dein#add("tpope/vim-repeat")
 
 " Snippet functionality
-NeoBundle "sirver/ultisnips"
+call dein#add("sirver/ultisnips")
 
 " Add surround action to Vim functionality
-NeoBundle "tpope/vim-surround"
+call dein#add("tpope/vim-surround")
 
 " Java features like autocomplete
-NeoBundle 'artur-shaik/vim-javacomplete2'
+call dein#add('artur-shaik/vim-javacomplete2')
 
 " Add commenting features
-NeoBundle 'scrooloose/nerdcommenter'
+call dein#add('scrooloose/nerdcommenter')
 
 " Add Sublime Multi-cursor support for Vim
-NeoBundle 'terryma/vim-multiple-cursors'
+call dein#add('terryma/vim-multiple-cursors')
 
 " Adds the ability to word jump by CamelCasing
-NeoBundle 'bkad/CamelCaseMotion'
+call dein#add('bkad/CamelCaseMotion')
 
 " Adds case changing, better autocorrect, and search fanciness
-NeoBundle 'tpope/vim-abolish'
+call dein#add('tpope/vim-abolish')
 
 " --------------------------------------------------
 
 
 " Required:
-call neobundle#end()
+call dein#end()
 
 " Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+if dein#check_install()
+  call dein#install()
+endif
