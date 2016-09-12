@@ -1,0 +1,29 @@
+snippet log "Log to the console."
+console.log(${1:args});
+endsnippet
+
+snippet () "Setup an anonymous function."
+(${1:args}) => ${2:{ ${3:args.stuff} }}
+endsnippet
+
+snippet fn "Create a function."
+function(${1}) {
+    ${2:args.stuff}
+}
+endsnippet
+
+snippet v "Create a variable."
+var ${1:args} = ${2:require('${3:underscore}')};
+endsnippet
+
+snippet tEqual "Description"
+it('should ${1:do awesome things}', function(assert) {
+    assert.equals(true, true);
+});
+endsnippet
+
+snippet tThrow "Snippet for a throws exception test."
+it('should ${1:throw an exception}', function(assert) {
+    assert.throws(() => new self());
+});
+endsnippet
