@@ -9,6 +9,7 @@ call dein#begin(expand('~/.vim/bundle'))
 " Required:
 call dein#add('Shougo/dein.vim')
 
+
 " --------------------------------------------------
 " General
 " --------------------------------------------------
@@ -40,6 +41,7 @@ call dein#add('terryma/vim-multiple-cursors')
 " Useful pair-like features that utilize square brackets []
 call dein#add('tpope/vim-unimpaired')
 
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
@@ -63,12 +65,17 @@ call dein#add('elzr/vim-json')
 " Show indentation guids
 call dein#add('Yggdroot/indentLine')
 
+
 " --------------------------------------------------
 " Navigation
 " --------------------------------------------------
 
 " Added fuzzy file search capabilities
 call dein#add("kien/ctrlp.vim")
+
+" Added fuzzy file search capabilities
+call dein#add("qpkorr/vim-bufkill")
+
 
 " --------------------------------------------------
 " Typing
