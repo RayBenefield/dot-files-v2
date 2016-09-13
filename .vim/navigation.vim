@@ -17,7 +17,7 @@ nmap ˚ <Plug>GitGutterPrevHunk
 " Handle bufferes - Next, Previous, Close
 nnoremap gt :bn<CR>
 nnoremap gT :bp<CR>
-nnoremap <C-X> :bw<CR>
+nnoremap <C-W> :BW<CR>
 
 " Easier Split Navigation
 nnoremap <C-J> <C-W><C-J>  " Down
