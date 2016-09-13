@@ -12,3 +12,6 @@ nnoremap <LEADER>et :edit ~/.vim/typing.vim<CR>
 
 " Shortcut to shortcuts.vim
 nnoremap <LEADER>es :edit ~/.vim/shortcuts.vim<CR>
+
+" Shortcut to bundles.vim
+nnoremap <LEADER>eb :edit ~/.vim/bundles.vim<CR>
