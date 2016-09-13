@@ -2,3 +2,7 @@ snippet nb "Neobundle Snippet"
 " ${2:Description}
 NeoBundle '${1:user/repo}'
 endsnippet
+
+snippet map "Setup a mapping"
+nnoremap ${1:<LEADER>${2}} ${3::echo stuff}${4:<CR>}
+endsnippet
