@@ -5,7 +5,7 @@ inoremap jk <esc>
 let mapleader = ";"
 
 " Easier Save
-nnoremap <C-W> :w<CR>
+nnoremap <C-S> :w<CR>
 
 " Indent file without moving cursor
 nnoremap g= gg=G``
