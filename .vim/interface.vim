@@ -4,6 +4,10 @@ syntax enable
 " A dark grey for highlighting; rgb=38,38,38
 highlight Visual cterm=NONE ctermbg=235 ctermfg=NONE guibg=Grey15
 
+" Color the line that the cursor is on
+set cursorline
+highlight CursorLine cterm=UNDERLINE ctermbg=234
+
 " Set the cursor to a vertical line in insert mode and a solid block in command mode
 let &t_SI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
