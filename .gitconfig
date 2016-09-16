@@ -27,6 +27,7 @@
 	re = rebase -i --autosquash
 	rs = reset
 	clearWithIgnore = rm --cached `git ls-files -i --exclude-from=.gitignore`
+	amend = commit -a --amend --no-edit
 [color]
 	ui = true
 [core]
