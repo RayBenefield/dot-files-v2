@@ -38,6 +38,8 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 brew install node
+PATH="/Users/u536644/homebrew/bin:$PATH"
+[~/.npmrc] strict-ssl=false
 cp ~/.dot-files/.gitconfig ~
  - Changed commiter to work email
  - Created Launch favorite-app workflows in Automator
@@ -47,3 +49,44 @@ cp ~/.dot-files/.gitconfig ~
 	 - 3 - Email
 	 - 7 - Messenger
  - Changed iTerm setting for changing window as it conflicted with favorite-app workflows
+brew install bash
+shopt -s autocd
+ - Turned off bell in iTerm
+[~/.gitconfig] amend = commit -a --amend --no-edit
+ - Download https://github.com/gildas-lormeau/JSONView-for-Chrome
+	 - Moved WebContent stuff into root directory
+	 - Installed as chrome extension
+brew cask install karabiner
+brew cask install seil
+ - Change caps lock on Seil to keycode 80 (F19)
+ - Added code in private.xml for Karabiner to support hyper key
+    <item>
+        <name>Remap F19 to Hyper</name>
+        <appendix>OS X doesn't have a Hyper. This maps F19 to Control + Shift + Option + Command.</appendix>
+        <identifier>usercustom.f19_to_hyper</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::F19,
+
+            KeyCode::COMMAND_R,
+            ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_R
+        </autogen>
+    </item>
+ - Created Favorite Apps with Keyboard Maestro
+	 - 1 - Terminal
+	 - 2 - Browser
+	 - 3 - Email
+	 - 6 - Automation
+	 - 7 - Messenger
+	 - 0 - File Browser
+ - Installed Cloud Foundry CLI: https://github.com/cloudfoundry/cli
+ - Installed Bluemix CLI: http://clis.ng.bluemix.net/ui/home.html
+ - Changed setting in Chrome to "Always show toolbar in fullscreen"
+curl -L https://iterm2.com/misc/install_shell_integration_and_utilities.sh | bash
+ - Changed the following keys in iTerm
+	 - CMD+RIGHT | Hex Code | 0x05 | Move to beginning of line
+	 - CMD+LEFT | Hex Code | 0x01 | Move to end of line
+	 - CMD+DELETE | Hex Code | 0x15 | Delete to beginning of line
+	 - ALT+LEFT | Escape Seq | b | Move back a word
+	 - ALT+RIGHT | Escape Seq | f | Move forward a word
+	 - ALT+DELETE | Hex Code | 0x1B 0x08 | Delete to beginning of word
