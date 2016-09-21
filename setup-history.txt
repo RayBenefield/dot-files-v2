@@ -59,7 +59,9 @@ shopt -s autocd
 brew cask install karabiner
 brew cask install seil
  - Change caps lock on Seil to keycode 80 (F19)
- - Added code in private.xml for Karabiner to support hyper key
+ - Added code in private.xml for Karabiner to support hyper key, $, #, *
+<?xml version="1.0"?>
+<root>
     <item>
         <name>Remap F19 to Hyper</name>
         <appendix>OS X doesn't have a Hyper. This maps F19 to Control + Shift + Option + Command.</appendix>
@@ -72,6 +74,43 @@ brew cask install seil
             ModifierFlag::OPTION_R | ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_R
         </autogen>
     </item>
+    <item>
+        <name>Remap Right Shift to `$`</name>
+        <appendix>Right shift is useless so we are giving it a use.</appendix>
+        <identifier>usercustom.rshift_to_dollar</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::SHIFT_R,
+
+            KeyCode::KEY_4,
+            ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Right command to `#`</name>
+        <appendix>Right command is useless so we are giving it a use.</appendix>
+        <identifier>usercustom.rcommand_to_hashtag</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::COMMAND_R,
+
+            KeyCode::KEY_3,
+            ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Right Alt to `*`</name>
+        <appendix>Right alt is useless so we are giving it a use.</appendix>
+        <identifier>usercustom.ralt_to_hashtag</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::OPTION_R,
+
+            KeyCode::KEY_8,
+            ModifierFlag::SHIFT_L
+        </autogen>
+    </item>
+</root>
  - Created Favorite Apps with Keyboard Maestro
 	 - 1 - Terminal
 	 - 2 - Browser
@@ -90,3 +129,8 @@ curl -L https://iterm2.com/misc/install_shell_integration_and_utilities.sh | bas
 	 - ALT+LEFT | Escape Seq | b | Move back a word
 	 - ALT+RIGHT | Escape Seq | f | Move forward a word
 	 - ALT+DELETE | Hex Code | 0x1B 0x08 | Delete to beginning of word
+brew cask install spectacle
+brew cask install textexpander
+ - Set abbreviations to expand at delimiter with abandoning it and setting the delimter to #
+ - Set textexpander sound to Hero
+ - Setup backup of TextExpander to ~/.dot-files/text-expander-backups
