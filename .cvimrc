@@ -4,6 +4,7 @@ set smoothscroll
 let barposition = "bottom"
 let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
 let mapleader = ";"
+let qmark a = [ "https://developer.amazon.com/edw/home.html#/skill/amzn1.echo-sdk-ams.app.f67c06e2-dd8c-4123-b788-77d5a3634667/en_US/testing", "https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/openBankProject?tab=code", "https://new-console.ng.bluemix.net/apps/3afe746c-cb56-42b2-96bb-c8d5daa366d0?paneId=overview&ace_config=%7B%22orgGuid%22%3A%226bf32ddf-c136-4901-8673-30fa7162f586%22%2C%22spaceGuid%22%3A%225dda15d2-3e54-4bc1-9999-177b3bfc78fd%22%2C%22redirect%22%3A%22https%3A%2F%2Fnew-console.ng.bluemix.net%2Fdashboard%2Fcompute%23cfApp%22%2C%22bluemixUIVersion%22%3A%22Atlas%22%7D" ]
 
 map <C-d> d
 map <C-u> u
