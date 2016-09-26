@@ -1,0 +1,12 @@
+set noautofocus
+set smoothscroll
+
+let barposition = "bottom"
+let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
+let mapleader = ";"
+
+map <C-d> d
+map <C-u> u
+map h gT
+map l gt
+map b :buffer<SPACE>
