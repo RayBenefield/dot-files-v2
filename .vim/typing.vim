@@ -14,6 +14,9 @@ nnoremap g= gg=G``
 vnoremap > >gv
 vnoremap < <gv
 
+" Select most recently pasted text
+nnoremap gp `[v`]
+
 nnoremap å <C-a>
 nnoremap ≈ <C-x>
 
