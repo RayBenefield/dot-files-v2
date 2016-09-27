@@ -1,3 +1,6 @@
+" Set backspace to work properly
+set backspace=indent,eol,start
+
 " Easier escape in insert mode
 inoremap jk <esc>
 
