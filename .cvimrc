@@ -10,4 +10,6 @@ map <C-d> d
 map <C-u> u
 map h gT
 map l gt
+map s gT
+map d gt
 map b :buffer<SPACE>
