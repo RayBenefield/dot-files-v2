@@ -41,6 +41,9 @@ call dein#add('terryma/vim-multiple-cursors')
 " Useful pair-like features that utilize square brackets []
 call dein#add('tpope/vim-unimpaired')
 
+" Useful pair-like features that utilize square brackets []
+call dein#add('scrooloose/syntastic')
+
 
 " --------------------------------------------------
 " Interface
