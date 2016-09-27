@@ -149,3 +149,6 @@ alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
 #!/bin/bash
 /usr/bin/osascript -e "display notification \"$*\" with title \"Terminal Notifier\""
  - Set prefs>profile>session setting for "Undo session closing" to 60 seconds
+ - Added a qmark for the Alexa POC
+ - Changed `s`/`d` in cvim to be left and right tabbing
+ - Added git amend to automatically amend and keep the commit message with a short command of git ad
