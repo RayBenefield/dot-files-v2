@@ -153,4 +153,9 @@ alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
  - Changed `s`/`d` in cvim to be left and right tabbing
  - Added git amend to automatically amend and keep the commit message with a short command of git ad
  - Added git fix to automatically fixup a previous commit
-fix = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $REV^' -
+fix = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git stash -u && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $REV^ && git stash pop' -
+ - Installed local npm with the below command
+curl -sL https://raw.githubusercontent.com/nolanlawson/local-npm-launch-agent/master/script.py | python -
+brew install shellcheck
+brew cask install postman
+npm -g install instant-markdown-d
