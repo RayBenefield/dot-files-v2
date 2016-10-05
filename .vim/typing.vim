@@ -47,3 +47,8 @@ xmap <silent> iw <Plug>CamelCaseMotion_ie
 omap <silent> w <Plug>CamelCaseMotion_w
 omap <silent> b <Plug>CamelCaseMotion_b
 omap <silent> e <Plug>CamelCaseMotion_e[20~
+
+nmap [l <Plug>unimpairedMoveUp
+nmap ]l <Plug>unimpairedMoveDown
+xmap [l <Plug>unimpairedMoveSelectionUp
+xmap ]l <Plug>unimpairedMoveSelectionDown

@@ -37,6 +37,12 @@ endif
 nnoremap <C-\> :vsplit<CR>:b#<CR> " Vertical
 nnoremap <C-_> :split<CR>:b#<CR>  " Horizontal
 
+" Switch [l and ]l with [e ]e
+nmap [e <Plug>unimpairedLPrevious
+nmap ]e <Plug>unimpairedLNext
+nmap [E <Plug>unimpairedLFirst
+nmap ]E <Plug>unimpairedLLast
+
 " Changed mapping to execute CTRL-P
 let g:ctrlp_map = '<LEADER>p'
 
