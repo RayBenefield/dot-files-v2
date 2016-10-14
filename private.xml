@@ -13,13 +13,13 @@
         </autogen>
     </item>
     <item>
-        <name>SHIFT_R to `$`</name>
-        <appendix>(SHIFT_R to `$` (shift+4))</appendix>
-        <identifier>remap.shift_r_to_dollar_sign</identifier>
+        <name>COMMAND_R to `#`</name>
+        <appendix>(COMMAND_R to `#` (shift+3))</appendix>
+        <identifier>remap.command_r_to_hash_tag</identifier>
         <autogen>
             __KeyToKey__
-            KeyCode::SHIFT_R,
-            KeyCode::KEY_4,
+            KeyCode::COMMAND_R,
+            KeyCode::KEY_3,
             ModifierFlag::SHIFT_L
         </autogen>
     </item>
