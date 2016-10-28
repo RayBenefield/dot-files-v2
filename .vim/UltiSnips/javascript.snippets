@@ -2,10 +2,6 @@ snippet log "Log to the console."
 console.log(${1:args});
 endsnippet
 
-snippet () "Setup an anonymous function."
-(${1:args}) => ${2:{ ${3:args.stuff} }}
-endsnippet
-
 snippet fn "Create a function."
 function(${1}) {
     ${2:args.stuff}
@@ -26,4 +22,8 @@ snippet tThrow "Snippet for a throws exception test."
 it('should ${1:throw an exception}', function(assert) {
     assert.throws(() => new self());
 });
+endsnippet
+
+snippet () "Arrow function"
+${1:(${2:args})} => ${3:{ ${4:args.stuff} }}
 endsnippet
