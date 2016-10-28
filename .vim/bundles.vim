@@ -108,6 +108,9 @@ call dein#add('bkad/CamelCaseMotion')
 " Adds case changing, better autocorrect, and search fanciness
 call dein#add('tpope/vim-abolish')
 
+" Better handling of text objects
+call dein#add('wellle/targets.vim')
+
 " --------------------------------------------------
 
 
