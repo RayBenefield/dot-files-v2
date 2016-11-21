@@ -4,6 +4,9 @@ PATH=./node_modules/.bin/:./:$PATH
 alias bsh='exec /usr/local/bin/bash --login'
 alias zsh='exec /bin/zsh --login'
 
+# Switch to using github cli
+alias git='hub'
+
 # Source shells
 alias brc='source ~/.bashrc'
 alias zrc='source ~/.zshrc'
