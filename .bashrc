@@ -6,10 +6,10 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 
 # If we have a .bash_aliases file then go ahead and use it
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 # If we have a .bash_paths file then go ahead and use it
 if [ -f ~/.bash_paths ]; then
-    . ~/.bash_paths
+    source ~/.bash_paths
 fi
