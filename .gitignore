@@ -3,3 +3,4 @@
 .vim/bundle/
 .vim/.easyclip
 *.sw*
+.vimperator/info/
