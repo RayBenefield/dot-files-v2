@@ -4,3 +4,4 @@
 .vim/.easyclip
 *.sw*
 .vimperator/info/
+text-expander-backups/
