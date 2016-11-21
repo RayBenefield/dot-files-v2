@@ -2,19 +2,16 @@
 eval capi='~/CAPI-Workspace/'
 
 # Public dot-files
-eval dot='~/public-dot-files/'
+eval dot='${HOME}/.dot-files/'
 
 # Vim folder
-eval vim='~/public-dot-files/.vim'
+eval vim='${HOME}/.vim'
 
 # Bashrc
-eval brc='~/public-dot-files/.bashrc'
+eval brc='${HOME}/.bashrc'
 
 # Zshrc
-eval zrc='~/public-dot-files/.zshrc'
+eval zrc='${HOME}/.zshrc'
 
 # Development
 eval dev='~/Development'
-
-# Document shortcut
-eval docs='~/Documents'
