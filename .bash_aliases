@@ -60,3 +60,7 @@ function wherein () {
     done
 }
 
+# Look at documentation for NPM module
+function docs() {
+    vim $dev/cache-local-npm/node_modules/$1/readme.md
+}
