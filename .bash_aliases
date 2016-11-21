@@ -64,3 +64,8 @@ function wherein () {
 function docs() {
     vim $dev/cache-local-npm/node_modules/$1/readme.md
 }
+
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$_";
+}
