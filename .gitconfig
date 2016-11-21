@@ -27,7 +27,7 @@
 	re = rebase -i --autosquash
 	rs = reset
 	clearWithIgnore = rm --cached `git ls-files -i --exclude-from=.gitignore`
-	ad = commit -a --amend --no-edit
+	ad = commit -au --amend --no-edit
 	fix = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git stash -u && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $REV^ && git stash pop' -
 [color]
 	ui = true
