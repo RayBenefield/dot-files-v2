@@ -4,6 +4,9 @@ set hidden
 " Sets a unified shared clipboard between yank and system
 set clipboard=unnamed
 
+" Run the shell as if it was the home shell
+set shellcmdflag=-ic
+
 " Turn off swap files
 set noswapfile
 
