@@ -2,7 +2,7 @@ set noautofocus
 set smoothscroll
 
 let barposition = 'bottom'
-let hintcharacters = 'hjklasdfgyuiopqwertnmzxcvb'
+let hintcharacters = 'asdfgqwertzxcvbhjklyuiopnm'
 let mapleader = ';'
 
 noremap h gT
