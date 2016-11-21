@@ -8,8 +8,8 @@ alias zsh='exec /bin/zsh --login'
 alias git='hub'
 
 # Source shells
-alias brc='source ~/.bashrc'
-alias zrc='source ~/.zshrc'
+alias brc="source $HOME/.bashrc"
+alias zrc="source $HOME/.zshrc"
 
 # Use a different screen version
 alias screen='/usr/local/bin/screen'
@@ -18,10 +18,10 @@ alias screen='/usr/local/bin/screen'
 alias vim='nvim'
 
 # Add new aliases and re-source them
-alias abbr='vim ~/public-dot-files/.bash_aliases && source ~/.bash_aliases'
+alias abbr="vim $HOME/.bash_aliases && source $HOME/.bash_aliases"
 
 # Add new aliases and re-source them
-alias paths='vim ~/.bash_paths && source ~/.bash_paths'
+alias paths="vim $HOME/.bash_paths && source $HOME/.bash_paths"
 
 # Remove a directory
 alias rmd='rm -rf'
