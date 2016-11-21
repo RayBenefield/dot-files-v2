@@ -12,6 +12,11 @@ highlight CursorLine cterm=UNDERLINE ctermbg=234
 let &t_SI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 let &t_EI = "\<Esc>P\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 
+" Set indentation level
+ set tabstop=4
+ set shiftwidth=4
+ set expandtab
+
 " Show the current line numbers
 set number
 
@@ -76,26 +81,26 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
- "Returns true if NERDTree open/active
+"Returns true if NERDTree open/active
 "function! s:isNTOpen()
-    "return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+"return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 "endfunction
 
- "Calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+"Calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
 "function! s:syncTree()
-    "if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
-        "NERDTreeFind
-        "wincmd p
-    "endif
+"if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
+"NERDTreeFind
+"wincmd p
+"endif
 "endfunction
 
- "When Vim is opened then open NERDTree
+"When Vim is opened then open NERDTree
 "augroup SyncWithNerdTree
-    "autocmd!
+"autocmd!
 
-     "When vim is opened, open NERDTree
-    "autocmd BufEnter * NERDTreeMirror
+"When vim is opened, open NERDTree
+"autocmd BufEnter * NERDTreeMirror
 
-     "Whenever a buffer is opened then sync up NERDTree
-    "autocmd BufEnter * call s:syncTree()
+"Whenever a buffer is opened then sync up NERDTree
+"autocmd BufEnter * call s:syncTree()
 "augroup END

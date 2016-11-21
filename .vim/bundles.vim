@@ -44,6 +44,8 @@ call dein#add('tpope/vim-unimpaired')
 " Useful pair-like features that utilize square brackets []
 call dein#add('scrooloose/syntastic')
 
+" Enable Gulp features with Vim
+call dein#add('KabbAmine/gulp-vim')
 
 " --------------------------------------------------
 " Interface
@@ -68,6 +70,17 @@ call dein#add('elzr/vim-json')
 " Show indentation guids
 call dein#add('Yggdroot/indentLine')
 
+" Show VIM autoload plantuml
+call dein#add('scrooloose/vim-slumlord')
+
+" PlantUML syntax
+call dein#add('aklt/plantuml-syntax')
+
+" Vim Javascript syntax
+call dein#add('pangloss/vim-javascript')
+
+" Vim JSX syntax
+call dein#add('mxw/vim-jsx')
 
 " --------------------------------------------------
 " Navigation

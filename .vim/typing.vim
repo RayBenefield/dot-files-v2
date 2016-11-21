@@ -2,7 +2,8 @@
 set backspace=indent,eol,start
 
 " Easier escape in insert mode
-inoremap jk <esc>
+inoremap jk <ESC>
+vnoremap JK <ESC>
 
 " Sets the leader character to `\`
 let mapleader = ";"
@@ -12,6 +13,10 @@ nnoremap <C-S> :w<CR>
 
 " Indent file without moving cursor
 nnoremap g= gg=G``
+
+" Move up a line even through word wrap
+nnoremap j gj
+nnoremap k gk
 
 " Better visual indentations
 vnoremap > >gv
