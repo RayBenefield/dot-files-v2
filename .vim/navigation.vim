@@ -43,6 +43,8 @@ nmap ]e <Plug>unimpairedLNext
 nmap [E <Plug>unimpairedLFirst
 nmap ]E <Plug>unimpairedLLast
 
+nnoremap <LEADER>f :NERDTreeFind<CR>
+
 " Changed mapping to execute CTRL-P
 let g:ctrlp_map = '<LEADER>p'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
