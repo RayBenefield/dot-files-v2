@@ -6,6 +6,7 @@ set clipboard=unnamed
 
 " Run the shell as if it was the home shell
 set shellcmdflag=-ic
+set shell=/bin/bash
 
 " Turn off swap files
 set noswapfile
