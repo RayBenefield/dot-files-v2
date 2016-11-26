@@ -27,10 +27,17 @@
 	re = rebase -i --autosquash
 	rs = reset
 	clearWithIgnore = rm --cached `git ls-files -i --exclude-from=.gitignore`
-	ad = commit -au --amend --no-edit
+	amend = commit -a --amend --no-edit
+	ad = commit -a --amend --no-edit
+	unad = reset HEAD@{1}
 	fix = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git stash -u && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $REV^ && git stash pop' -
+	purge = "!f() { git branch -d $1 && git push origin --delete $1; }; f"
+    setup = "!f() { git remote add origin $1 && git push -u origin master; }; f"
+    attach = "!f() { git remote set-url --add origin $1; }; f"
 [color]
 	ui = true
+[color "status"]
+	untracked = cyan
 [core]
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore
