@@ -1,9 +1,3 @@
-# Grab all aliases
-source ~/.bash_aliases
-
-# Grab all paths
-source ~/.bash_paths
-
 # Don't trust the cache for autocompletion
 zstyle ":completion:*:commands" rehash 1
 
@@ -11,7 +5,7 @@ zstyle ":completion:*:commands" rehash 1
 ##### oh-my-zsh setup #####
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/GodlyPerfection/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,7 +55,20 @@ plugins=(git emoji emoji-clock)
 
 # User configuration
 
+export http_proxy='http://proxy.wellsfargo.com:8080'
+export https_proxy='http://proxy.wellsfargo.com:8080'
+export NO_PROXY=localhost,127.0.0.0/8,127.0.1.1,'github.wellsfargo.com','http://localhost:4873'
+
+export NODE_TLS_REJECT_UNAUTHORIZED="0"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Grab all aliases
+source ~/.bash_aliases
+
+alias -s md=vim
+
+# Grab all paths
+source ~/.bash_paths
 
 source $ZSH/oh-my-zsh.sh

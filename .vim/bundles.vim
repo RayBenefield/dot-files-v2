@@ -47,6 +47,12 @@ call dein#add('scrooloose/syntastic')
 " Enable Gulp features with Vim
 call dein#add('KabbAmine/gulp-vim')
 
+" Easy tag generation
+call dein#add('xolox/vim-easytags')
+
+" Required by easytags
+call dein#add('xolox/vim-misc')
+
 " --------------------------------------------------
 " Interface
 " --------------------------------------------------
@@ -123,6 +129,9 @@ call dein#add('tpope/vim-abolish')
 
 " Better handling of text objects
 call dein#add('wellle/targets.vim')
+
+" Better text alignment
+call dein#add('junegunn/vim-easy-align')
 
 " --------------------------------------------------
 

@@ -28,6 +28,14 @@ nnoremap gp `[v`]
 nnoremap å <C-a>
 nnoremap ≈ <C-x>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+let @a = 'gaip1|gaip2|gaip3|gaip4|gaip5|gaip6|gaip7|gaip8|gaip9|'
+
 " Set folder that UltiSnips snippets are kept in
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
