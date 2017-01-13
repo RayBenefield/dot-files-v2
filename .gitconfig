@@ -3,6 +3,8 @@
 	email = Raymond.Benefield@gmail.com
 [diff]
 	tool = vimdiff
+	mnemonicprefix = true
+	renames = copies
 [difftool]
 	prompt = false
 [alias]
@@ -14,6 +16,7 @@
 	ci = commit
 	br = branch
 	co = checkout
+    un = reset HEAD --
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	l = log --oneline
@@ -48,3 +51,5 @@
 	default = tracking
 [merge]
 	stat = true
+[rerere]
+	enabled = true
