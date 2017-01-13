@@ -72,3 +72,6 @@ function docs() {
 function mkd() {
     mkdir -p "$@" && cd "$_";
 }
+
+alias copyLastCmd="fc -ln -1 | awk '{\$1=\$1}1' | pbcopy"
+eval "$(gulp --completion=bash)"
