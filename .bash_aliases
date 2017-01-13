@@ -4,6 +4,9 @@ PATH=./node_modules/.bin/:./:$PATH
 alias bsh='exec /usr/local/bin/bash --login'
 alias zsh='exec /bin/zsh --login'
 
+# Eclim startup
+alias eclim='${ECLIPSE_HOME}/eclimd'
+
 # Switch to using github cli
 alias git='hub'
 
