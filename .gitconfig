@@ -1,6 +1,5 @@
-[user]
-	name = Raymond Benefield
-	email = Raymond.Benefield@gmail.com
+[include]
+	path = ~/.gituser
 [diff]
 	tool = vimdiff
 	mnemonicprefix = true
