@@ -48,7 +48,7 @@ call dein#add('scrooloose/syntastic')
 call dein#add('KabbAmine/gulp-vim')
 
 " Easy tag generation
-call dein#add('xolox/vim-easytags')
+"call dein#add('xolox/vim-easytags')
 
 " Required by easytags
 call dein#add('xolox/vim-misc')

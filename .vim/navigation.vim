@@ -28,6 +28,8 @@ nnoremap <C-H> <C-W><C-H>  " Left
 nnoremap <UP> <C-U>
 nnoremap <DOWN> <C-D>
 
+nnoremap ' ;
+
 " TODO Temporary workaround for iTerm/Mac OS X/NeoVim bug
 " https://github.com/neovim/neovim/issues/2048
 if has('nvim')

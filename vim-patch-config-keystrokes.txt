@@ -1,0 +1,4 @@
+setvbuf(scriptout, NULL, _IONBF, 0);
+./configure --disable-gui --without-x --disable-gpm --disable-nls --with-tlib=ncurses --enable-multibyte --with-features=huge --enable-pythoninterp=yes --enable-python3interp=yes --enable-rubyinterp=yes
+make
+sudo make install

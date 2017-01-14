@@ -19,3 +19,15 @@ augroup filetype_vim
     autocmd!
     autocmd BufWritePost *.vim :source $MYVIMRC
 augroup END
+
+" Automatically re-source vimrc when a *.vim file is saved
+augroup filetype_markdown
+    autocmd!
+    autocmd BufWritePost *.md :set conceallevel=0
+augroup END
+
+" Automatically re-source vimrc when a *.vim file is saved
+augroup filetype_haloscript
+    autocmd!
+    autocmd BufRead *.hs* :set ft=markdown
+augroup END

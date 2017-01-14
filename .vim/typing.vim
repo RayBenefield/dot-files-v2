@@ -39,6 +39,8 @@ let @a = 'gaip1|gaip2|gaip3|gaip4|gaip5|gaip6|gaip7|gaip8|gaip9|'
 " Set folder that UltiSnips snippets are kept in
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
+nnoremap <LEADER>bj :%!python -m json.tool<CR>
+
 " Setup autocompletion for all java files
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
